@@ -42,5 +42,8 @@ public class Person {
 		this.age = age;
 	}
 
-
+	@Override
+	public String toString() {
+		return this.name + "年龄：" + this.age;
+	}
 }

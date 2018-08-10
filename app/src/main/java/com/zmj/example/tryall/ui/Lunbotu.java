@@ -12,9 +12,11 @@ import com.jude.rollviewpager.OnItemClickListener;
 import com.jude.rollviewpager.RollPagerView;
 import com.zmj.example.tryall.R;
 import com.zmj.example.tryall.adapter.MyRollViewPagerAdapter;
+import com.zmj.example.tryall.interfaces.MyCallBack;
 import com.zmj.example.tryall.utils.FileHelper;
 import com.zmj.example.tryall.utils.PermissionUtils;
 import com.zmj.example.tryall.utils.SDFileHelper;
+import com.zmj.example.tryall.utils.okhttputil.NetClient;
 
 public class Lunbotu extends AppCompatActivity implements View.OnClickListener {
 
@@ -142,6 +144,20 @@ public class Lunbotu extends AppCompatActivity implements View.OnClickListener {
 				//sdFileHelper.readFromSD(filename);
 				String content = sdFileHelper.readContentFromSD(filename);
 				Toast.makeText(Lunbotu.this,"读取数据：" + content,Toast.LENGTH_SHORT).show();
+			}
+		});
+	}
+
+	private void askNnet(){
+		NetClient.getNetClient().callNet("http://baidu.com", new MyCallBack() {
+			@Override
+			public void onSuccess(String json) {
+
+			}
+
+			@Override
+			public void onFailure(int code) {
+
 			}
 		});
 	}

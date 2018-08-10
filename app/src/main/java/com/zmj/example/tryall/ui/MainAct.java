@@ -64,7 +64,6 @@ public class MainAct extends AppCompatActivity implements View.OnClickListener{
 		if (fg4 != null)fragmentTransaction.hide(fg4);
 	}
 
-
 	@Override
 	public void onClick(View view) {
 		FragmentTransaction fTransaction = fManager.beginTransaction();

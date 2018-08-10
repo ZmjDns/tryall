@@ -37,7 +37,6 @@ public class SaxHelper extends DefaultHandler {
 			Log.i("SAX", "startElement: 开始处理person元素");
 		}
 		this.tagName = localName;
-
 	}
 
 	//读取内容，第一个参数为字符串内容，起始位置，长度

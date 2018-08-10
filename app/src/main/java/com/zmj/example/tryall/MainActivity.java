@@ -13,15 +13,18 @@ import android.widget.Toast;
 
 import com.zmj.example.tryall.fragment.FragmentOne;
 import com.zmj.example.tryall.fragment.FragmentTwo;
+import com.zmj.example.tryall.ui.DataAnsis;
 import com.zmj.example.tryall.ui.Lunbotu;
 import com.zmj.example.tryall.ui.MainAct;
 import com.zmj.example.tryall.ui.TestHttpurlConnAct;
+import com.zmj.example.tryall.ui.TestRetrofitAct;
 import com.zmj.example.tryall.ui.TextInText;
 import com.zmj.example.tryall.ui.ViewPagerFgAct;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-	private Button ui_mainAct,ui_TextInText,ui_ViewPagerFgAct,ui_Lunbotu,testHttpurl;
+	private Button ui_mainAct,ui_TextInText,ui_ViewPagerFgAct,ui_Lunbotu,testHttpurl,
+	btn_Dataanalysis,btn_TestRetrofit;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		ui_TextInText = findViewById(R.id.ui_TextInText);
 		ui_ViewPagerFgAct = findViewById(R.id.ui_ViewPagerFgAct);
 		ui_Lunbotu = findViewById(R.id.ui_Lunbotu);
+		btn_Dataanalysis = findViewById(R.id.btn_Dataanalysis);
+		btn_TestRetrofit = findViewById(R.id.btn_TestRetrofit);
 
 		testHttpurl = findViewById(R.id.testHttpurl);
 
@@ -40,6 +45,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		ui_ViewPagerFgAct.setOnClickListener(this);
 		ui_Lunbotu.setOnClickListener(this);
 		testHttpurl.setOnClickListener(this);
+		btn_Dataanalysis.setOnClickListener(this);
+		btn_TestRetrofit.setOnClickListener(this);
 
 		//getScreenWHshowFg();
 		//testResolver();
@@ -98,6 +105,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 				break;
 			case R.id.testHttpurl:
 				startActivity(new Intent(this, TestHttpurlConnAct.class));
+				break;
+			case R.id.btn_Dataanalysis:
+				startActivity(new Intent(this, DataAnsis.class));
+				break;
+			case R.id.btn_TestRetrofit:
+				startActivity(new Intent(this, TestRetrofitAct.class));
 				break;
 			default:
 				break;
