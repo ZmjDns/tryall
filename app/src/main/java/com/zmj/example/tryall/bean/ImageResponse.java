@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
  * on 2018/8/9
  */
 public class ImageResponse {
-	@SerializedName("imgresult")
+	@SerializedName("imgresult") //用于数据的解析
 	@Expose
 	private String result;
 
