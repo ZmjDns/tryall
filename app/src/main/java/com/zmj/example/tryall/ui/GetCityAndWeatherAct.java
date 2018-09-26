@@ -83,7 +83,7 @@ public class GetCityAndWeatherAct extends AppCompatActivity {
 				if (cursor != null){
 					String cityName = cursor.getString(cursor.getColumnIndex("cityname"));
 					cityCode = cursor.getString(cursor.getColumnIndex("citycode"));
-					Log.i("DATA", "城市" + cityName + "编码" + cityCode);
+
 				}
 			}
 		}catch (Exception e){
