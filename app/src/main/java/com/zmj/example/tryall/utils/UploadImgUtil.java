@@ -21,6 +21,7 @@ import retrofit2.Response;
 /**
  * Created by ZMJ
  * on 2018/8/10
+ * Description:上传图片工具类
  */
 public class UploadImgUtil {
 	private static String imgUrl;

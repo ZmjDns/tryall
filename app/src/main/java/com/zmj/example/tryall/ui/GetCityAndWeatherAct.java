@@ -24,6 +24,9 @@ import com.zmj.example.tryall.utils.LocationUtils;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 获取城市并获取天气信息
+ */
 public class GetCityAndWeatherAct extends AppCompatActivity {
 
 	private TextView tv_cityName,tv_weather;
@@ -41,8 +44,6 @@ public class GetCityAndWeatherAct extends AppCompatActivity {
         tv_weather = findViewById(R.id.tv_weather);
         recyclerWeather = findViewById(R.id.recyclerWeather);
         getCityName();
-
-//		getDataBase();
 
         getWeather();
     }
@@ -94,8 +95,7 @@ public class GetCityAndWeatherAct extends AppCompatActivity {
 
 	private void getWeather(){
 		new GetWeatherByCityTask(GetCityAndWeatherAct.this,getDataBase(),recyclerWeather).execute();
-//		new GetWeatherByCityTask(GetCityAndWeatherAct.this,getDataBase(),tv_weather).execute();
-//		initRecyclerWeather();
+
 	}
 
 

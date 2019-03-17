@@ -165,6 +165,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //				startActivity(new Intent(this, NewTakePhoto.class));
 				startActivity(new Intent(this, HeadPicAct.class));
 				break;
+				//获取地理位置，并获取天气信息
 			case R.id.btn_locate:
 				startActivity(new Intent(this, GetCityAndWeatherAct.class));
 				break;
